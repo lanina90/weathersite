@@ -12,10 +12,9 @@ let currentCity = {
 document.addEventListener('DOMContentLoaded', function () {
     const cityInput = document.querySelector('#city-input');
 
-    // получает данные из локального хранилища браузера по ключу 'weatherData' и сохраняет их в переменной savedWeatherData.
     const savedWeatherData = localStorage.getItem('weatherData');
 
-    //проверяем, есть ли данные в локальном хранилище, и если есть, отображаем сохраненные данные, если данных в локальном хранилище нет, то выполняет функцию getWeather() с координатами для Киева по умолчанию.
+
     if (savedWeatherData) {
         const weatherData = JSON.parse(savedWeatherData);
 
@@ -23,13 +22,13 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         getWeather(currentCity.lat, currentCity.lon);
     }
-//получаем список городов из локального файла city.list.json при помощи HTTP-запроса.
+
     fetch('city.list.json')
         .then(response => response.json()) //обрабатывает полученный ответ от сервера в формате JSON и возвращает его как результат.
         .then(data => {
             const cities = data;
 
-//устанавливает обработчик событий для поля ввода города, который вызывает функцию getWeather() с координатами города, выбранного пользователем в списке городов.
+
             cityInput.addEventListener('keydown', event => {
                 if (event.key === 'Enter') {
                     const cityName = cityInput.value;
@@ -179,5 +178,4 @@ document.addEventListener('DOMContentLoaded', function () {
         const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
         return `${formattedHours}:${formattedMinutes} ${ampm}`;
     }
-
 })
