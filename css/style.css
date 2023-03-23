@@ -1,8 +1,10 @@
 @import "resetstyle.css";
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
     font-family: Roboto, Rubik, sans-serif;
 }
+
 .wrap {
     display: flex;
     justify-content: space-around;
@@ -234,6 +236,7 @@ body {
 /* Адаптив */
 
 @media (max-width: 2100px) {
+
     .day-forecast {
         min-height: 61vh;
         font-size: 18px;
@@ -249,7 +252,6 @@ body {
         width: 35%;
     }
 
-    .main
 
     .forecast__desc {
         min-height: 25vh;
@@ -257,31 +259,44 @@ body {
         margin-top: 40px;
     }
 
-    .today{
+    .today {
         min-height: 20vh;
         align-items: flex-start;
     }
 
     .headers {
-        font-size: 16px;
+        font-size: 24px;
         line-height: 20px;
         margin-top: 40px;
         padding: 10px;
     }
+    .today-temp {
+        font-size: 28px;
+    }
+
+    .switch-container .option {
+        font-size: 16px;
+    }
+    .main__search input {
+        font-size: 20px;
+    }
+
     .desc-title {
         font-size: 22px;
         padding: 10px;
     }
-    .desc-data{
+
+    .desc-data {
         font-size: 22px;
         padding: 10px;
     }
 }
+
 @media (max-width: 1400px) {
     .day-forecast {
         min-height: 100vh;
         font-size: 16px;
-}
+    }
 
     .day-forecast span {
         font-size: 16px;
@@ -291,8 +306,8 @@ body {
 
     .right {
         width: 42%;
-
     }
+
     .main {
         width: 55%;
     }
@@ -303,7 +318,7 @@ body {
         margin-top: 40px;
     }
 
-    .today{
+    .today {
         min-height: 20vh;
         align-items: flex-start;
     }
@@ -327,6 +342,7 @@ body {
     .main {
         width: 100%;
     }
+
     .main__info {
         margin-top: 40px;
     }
@@ -384,13 +400,16 @@ body {
         margin-top: 20px;
         align-items: flex-start;
     }
+
     .day-forecast {
         width: 100%;
         font-size: 32px;
     }
+
     .day-forecast span {
         font-size: 32px;
     }
+
     .main__search input {
         font-size: 32px;
         line-height: 90px;
@@ -434,6 +453,7 @@ body {
     .day-forecast {
         font-size: 14px;
     }
+
     .day-forecast span {
         font-size: 16px;
     }
