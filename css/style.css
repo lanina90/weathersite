@@ -45,7 +45,7 @@ body {
 
 /* Стили для правого сайдбара */
 .right {
-    width: 30%;
+    width: 35%;
 }
 
 /* Стили для основной части */
@@ -178,6 +178,7 @@ body {
     color: rgb(147, 153, 162);
     text-align: center;
     text-transform: capitalize;
+    min-height: 90vh;
 }
 
 .day-forecast img {
@@ -231,6 +232,91 @@ body {
 }
 
 /* Адаптив */
+
+@media (max-width: 2100px) {
+    .day-forecast {
+        min-height: 61vh;
+        font-size: 18px;
+    }
+
+    .day-forecast span {
+        font-size: 18px;
+        line-height: 22px;
+        padding-right: 5px;
+    }
+
+    .right {
+        width: 35%;
+    }
+
+    .main
+
+    .forecast__desc {
+        min-height: 25vh;
+        align-items: flex-start;
+        margin-top: 40px;
+    }
+
+    .today{
+        min-height: 20vh;
+        align-items: flex-start;
+    }
+
+    .headers {
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 40px;
+        padding: 10px;
+    }
+    .desc-title {
+        font-size: 22px;
+        padding: 10px;
+    }
+    .desc-data{
+        font-size: 22px;
+        padding: 10px;
+    }
+}
+@media (max-width: 1400px) {
+    .day-forecast {
+        min-height: 100vh;
+        font-size: 16px;
+}
+
+    .day-forecast span {
+        font-size: 16px;
+        line-height: 22px;
+        padding-right: 5px;
+    }
+
+    .right {
+        width: 42%;
+
+    }
+    .main {
+        width: 55%;
+    }
+
+    .forecast__desc {
+        min-height: 20vh;
+        align-items: flex-start;
+        margin-top: 40px;
+    }
+
+    .today{
+        min-height: 20vh;
+        align-items: flex-start;
+    }
+
+    .headers {
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 40px;
+        padding: 10px;
+    }
+
+}
+
 @media (max-width: 920px) {
     .wrap {
         flex-direction: column;
@@ -330,6 +416,10 @@ body {
     .main__search input {
         line-height: 73px;
         font-size: 20px;
+    }
+
+    .main__info-left {
+        height: 80%;
     }
 
     .forecast {
